@@ -6,5 +6,6 @@ import compressor from "astro-compressor";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://magazineklert.vercel.app/',
   integrations: [tailwind(), sitemap(), compressor()]
 });
