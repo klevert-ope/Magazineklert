@@ -2,7 +2,7 @@
 const posts = await Astro.glob('../content/Showcase/*.md');
 ---
 
-<section class=" mt-40">
+<section class=" mt-32">
       <div class="grid gap-5 lg:grid-auto-fit-[600px] md:grid-auto-fit-[300px] max-sm:grid-auto-fit-[140px] blog-cardscale">
         {posts.map(post => (
         <div id="blogcard" class=" blogcardcontent">
