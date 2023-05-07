@@ -86,7 +86,42 @@ elements.forEach(el => {
 
 
 
+  // create a timeline
+  var tl = gsap.timeline();
 
+  // add a tween to animate the width of the progress bar
+  tl.to('#preloader-bar', { duration: 1, width: '100%' });
+
+  // update the progress bar as the page loads
+  var progressBar = document.getElementById('preloader-bar');
+  var body = document.body;
+  var html = document.documentElement;
+  var documentHeight = Math.max(
+    body.scrollHeight,
+    body.offsetHeight,
+    html.clientHeight,
+    html.scrollHeight,
+    html.offsetHeight
+  );
+  var windowHeight = window.innerHeight;
+  var scrollY = window.scrollY;
+
+  window.addEventListener('scroll', updateProgressBar);
+  window.addEventListener('resize', updateProgressBar);
+
+  function updateProgressBar() {
+    var percent = (scrollY / (documentHeight - windowHeight)) * 100;
+    percent = Math.round(percent * 100) / 100;
+    progressBar.style.width = percent + '%';
+  }
+
+  // hide preloader and show content when the page is fully loaded
+  window.onload = function() {
+    var preloader = document.getElementById('preloader');
+    var content = document.getElementById('content');
+    preloader.style.display = 'none';
+    content.style.display = 'block';
+  };
   
   
   

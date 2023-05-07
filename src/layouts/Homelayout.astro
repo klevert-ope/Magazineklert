@@ -38,8 +38,13 @@ const { title } = Astro.props;
 		</style>
 	</head>
 	<body class=" bg-black/95 mr-1 ml-1 scrollbar-thumb-lime-400 scrollbar scrollbar-track-transparent scrollbar-thumb-rounded-lg scrollbar-w-1">
+		<div id="preloader">
+  		<div id="preloader-bar"></div>
+		</div>
+		<div id="content">
 		<Header/>
 		<slot/>
+		</div>
 		<script src="/src/js/index.js"></script>
 	</body>
 </html>
