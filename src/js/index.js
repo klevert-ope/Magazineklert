@@ -9,13 +9,11 @@ initTE({ Sidenav });
 
 import { gsap } from "gsap";
 import { ExpoScaleEase, RoughEase, SlowMo } from "gsap/EasePack";
-import { Flip } from "gsap/Flip";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { TextPlugin } from "gsap/TextPlugin";
 
 
-gsap.registerPlugin(Flip, ScrollTrigger, ScrollToPlugin, TextPlugin, ExpoScaleEase, RoughEase, SlowMo);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ExpoScaleEase, RoughEase, SlowMo);
 
 
 // get all the sections in your document and apply smoothscroll
