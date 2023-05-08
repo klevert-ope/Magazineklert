@@ -53,7 +53,7 @@ gsap.set(blogCard, { scale: 0.7 });
 // animate the scale of the blog card to 1 when it reaches the top 80% of the viewport
 gsap.to(blogCard, {
   scale: 1,
-  duration: 3.5,
+  duration: 2.5,
   ease: 'power2.out',
   scrollTrigger: {
     trigger: blogCard,
