@@ -1,92 +1,57 @@
 <header>
-    <div class=" flex justify-between">
-    <div id="logo" class=" font-ClashDisplay font-extrabold lg:text-5xl text-4xl text-white">
-    <div class=" daily">Daily</div>
-    <div class=" pop text-lime-400 font-Array text-6xl">PoP</div>
-    <div class=" magazine">Magazine</div>
-    </div>
-    <div class=" est font-Array text-xs text-white">EST||2023</div>
-    </div>
-
-    
-        <!-- Sidenav -->
-    <nav
-    id="sidenav-7"
-    class="fixed right-0 top-0 z-[1035] h-screen w-60 translate-x-full overflow-hidden bg-zinc-900 data-[te-sidenav-hidden='false']:-translate-x-0"
-    data-te-sidenav-init
-    data-te-sidenav-right="true">
-    <ul class="relative m-0 list-none px-[0.2rem] font-Satoshi text-sm text-lime-400" data-te-sidenav-menu-ref>
-      <li class="relative">
-        <a
-          class="flex mt-24 h-12 cursor-pointer items-center whitespace-nowrap  px-6 py-4  transition duration-300 ease-linear  hover:text-orange-600  active:text-orange-600 motion-reduce:transition-none"
-          data-te-sidenav-link-ref href="/">
-          <span>HOME</span>
-        </a>
-      </li>
-      <li class="relative">
-        <a
-          class="flex h-12 cursor-pointer items-center whitespace-nowrap px-6 py-4  transition duration-300 ease-linear  hover:text-orange-600   active:text-orange-600"
-          data-te-sidenav-link-ref>
-          <span>SHOWCASE</span>
-          <span
-            class="absolute right-0 ml-auto mr-[0.8rem] transition-transform duration-300 ease-linear motion-reduce:transition-none [&>svg]:text-gray-300"
-            data-te-sidenav-rotate-icon-ref>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5">
-              <path
-                fill-rule="evenodd"
-                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                clip-rule="evenodd" />
-            </svg>
-          </span>
-        </a>
-        <ul
-          class="!visible relative m-0 hidden list-none p-0 data-[te-collapse-show]:block font-Satoshi text-xs text-lime-400 "
-          data-te-sidenav-collapse-ref>
-          <li class="relative">
-            <a
-              class="flex h-6 cursor-pointer items-center whitespace-nowrap  py-4 pl-[3.4rem] pr-6  transition duration-300 ease-linear  hover:text-orange-600  active:text-orange-600   motion-reduce:transition-none"
-              data-te-sidenav-link-ref href="/Ava Max"
-              >AVA</a
-            >
-          </li>
-          <li class="relative">
-            <a
-              class="flex h-6 cursor-pointer items-center whitespace-nowrap  py-4 pl-[3.4rem] pr-6  transition duration-300 ease-linear  hover:text-orange-600   active:text-orange-600   motion-reduce:transition-none"
-              data-te-sidenav-link-ref href="/DJ John Doe"
-              >DJ JOHN</a>
-          </li>
-          <li class="relative">
-            <a
-              class="flex h-6 cursor-pointer items-center whitespace-nowrap  py-4 pl-[3.4rem] pr-6  transition duration-300 ease-linear  hover:text-orange-600   active:text-orange-600   motion-reduce:transition-none"
-              data-te-sidenav-link-ref href="/Dancer Jane Smith"
-              >DANCER JANE</a>
-          </li>
-          <li class="relative">
-            <a
-              class="flex h-6 cursor-pointer items-center whitespace-nowrap  py-4 pl-[3.4rem] pr-6  transition duration-300 ease-linear  hover:text-orange-600   active:text-orange-600   motion-reduce:transition-none"
-              data-te-sidenav-link-ref href="/Dua Lipa"
-              >DUA LIPA</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    </nav>
-    <!-- Sidenav -->
+  <div class=" flex justify-between">
+  <div id="logo" class=" font-ClashDisplay font-extrabold lg:text-5xl text-4xl text-white">
+  <div class=" daily">Daily</div>
+  <div class=" pop text-lime-400 font-Array text-6xl">PoP</div>
+  <div class=" magazine">Magazine</div>
+  </div>
+  <div class=" est font-Array text-xs text-white">EST||2023</div>
+  </div>
+    <!-- drawer component -->
+  <div id="drawer-navigation" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-black w-80 font-Satoshi " tabindex="-1" aria-labelledby="drawer-navigation-label">
+    <h5 id="drawer-navigation-label" class="text-base font-bold text-orange-600 uppercase ">Menu</h5>
+    <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
+        <svg aria-hidden="true" class="w-5 h-5" fill="#a3e635" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        <span class="sr-only">Close menu</span>
+    </button>
+  <div class="py-4 overflow-y-auto">
+      <ul class="space-y-2 font-medium">
+        <li>
+            <a href="/" class="flex items-center p-2 text-lime-400 rounded-lg hover:bg-gray-50 ">
+              <span class="ml-3">HOME</span>
+            </a>
+        </li>
+        <li>
+            <button type="button" class="flex items-center w-full p-2 text-base text-lime-400 transition duration-75 rounded-lg group hover:bg-gray-50 " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap">SHOWCASE</span>
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+            <ul id="dropdown-example" class="hidden py-2 space-y-2">
+                  <li>
+                    <a href="/Ava Max" class="flex items-center w-full p-2 text-lime-400 transition duration-75 rounded-lg pl-11 group hover:bg-gray-50">AVA</a>
+                  </li>
+                  <li>
+                    <a href="/DJ John Doe" class="flex items-center w-full p-2 text-lime-400 transition duration-75 rounded-lg pl-11 group hover:bg-gray-50">DJ JOHN</a>
+                  </li>
+                  <li>
+                    <a href="/Dancer Jane Smith" class="flex items-center w-full p-2 text-lime-400 transition duration-75 rounded-lg pl-11 group hover:bg-gray-50">DANCER JANE</a>
+                  </li>
+                  <li>
+                    <a href="/Dua Lipa" class="flex items-center w-full p-2 text-lime-400 transition duration-75 rounded-lg pl-11 group hover:bg-gray-50">DUA LIPA</a>
+                </li>
+            </ul>
+        </li>
+      </ul>
+  </div>
+  </div>
 </header>
-<!-- Toggler -->
-<button
-class=" sticky top-0 z-50 sidedrawer text-sm font-Satoshi font-extrabold text-orange-600 transition duration-150 ease-in-out "
-data-te-sidenav-toggle-ref
-data-te-target="#sidenav-7"
-aria-controls="#sidenav-7"
-aria-haspopup="true">
-<span>
+
+
+<!-- drawer init and show -->
+<div class=" sidedrawer sticky top-0 z-30">
+  <button class=" text-sm font-Satoshi font-extrabold text-orange-600 focus:outline-none " type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
   MENU
-</span>
-</button>
-<!-- Toggler -->
+  </button>
+</div>
+
 

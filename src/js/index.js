@@ -1,12 +1,3 @@
-// Initialization side nav
-import {
-  Sidenav,
-  initTE,
-} from "tw-elements";
-
-initTE({ Sidenav });
-
-
 import { gsap } from "gsap";
 import { ExpoScaleEase, RoughEase, SlowMo } from "gsap/EasePack";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

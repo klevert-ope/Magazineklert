@@ -13,6 +13,6 @@ module.exports = {
 	plugins: [
 		require('@shrutibalasa/tailwind-grid-auto-fit'),
 		require('tailwind-scrollbar')({ nocompatible: true }),
-		require("tw-elements/dist/plugin.cjs"),
+		require('flowbite/plugin'),
 	],
 }
