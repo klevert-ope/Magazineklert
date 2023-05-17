@@ -2,61 +2,90 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
-
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-		<link rel="manifest" href="/favicon/site.webmanifest">
-		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#3B755F">
-		<link rel="preload" href="/fonts/Array-Semibold.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="/fonts/ClashDisplay-Variable.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="/fonts/Satoshi-Variable.woff2" as="font" type="font/woff2" crossorigin>	  
-		<meta name="msapplication-TileColor" content="#3B755F">
-		<meta name="theme-color" content="#a3e635">
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class=" bg-black/95 mr-1 ml-1 scrollbar-thumb-lime-400 scrollbar scrollbar-track-transparent scrollbar-thumb-rounded-lg scrollbar-w-1">
-		<Header/>
-		<slot/>
-		<Footer/>
-		<script src="/src/js/index.js"></script>
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#3B755F"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Array-Semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/ClashDisplay-Variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Satoshi-Variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <meta name="msapplication-TileColor" content="#3B755F" />
+    <meta name="theme-color" content="#a3e635" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    class="bg-black/95 mr-1 ml-1 scrollbar-thumb-lime-400 scrollbar scrollbar-track-transparent scrollbar-thumb-rounded-lg scrollbar-w-1"
+  >
+    <Header />
+    <slot />
+    <Footer />
+    <script src="/src/js/index.js"></script>
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"
+    ></script>
+  </body>
 </html>
 <style is:global>
-	@font-face {
-	  font-family: 'Satoshi';
-	  src: url('/fonts/Satoshi-Variable.woff2') format('woff2');
-	}
-	@font-face {
-	  font-family: 'Array';
-	  src: url('/fonts/Array-Semibold.woff2') format('woff2');
-	}
-	@font-face {
-	  font-family: 'ClashDisplay';
-	  src: url('/fonts/ClashDisplay-Variable.woff2') format('woff2');
-	}
+  @font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Array";
+    src: url("/fonts/Array-Semibold.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "ClashDisplay";
+    src: url("/fonts/ClashDisplay-Variable.woff2") format("woff2");
+  }
 </style>
-  
-
-
-
-
-
-  
-
-
-
-

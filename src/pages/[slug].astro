@@ -1,17 +1,16 @@
 ---
 import Homelayout from "../layouts/Homelayout.astro";
 
-
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../content/Showcase/*.md');
+  const posts = await Astro.glob("../content/Showcase/*.md");
 
-  return posts.map(post => ({
+  return posts.map((post) => ({
     params: {
-      slug: post.frontmatter.slug
+      slug: post.frontmatter.slug,
     },
     props: {
-      post
-    }
+      post,
+    },
   }));
 }
 
@@ -19,13 +18,18 @@ const { Content, frontmatter } = Astro.props.post;
 ---
 
 <Homelayout title={frontmatter.title}>
-  <section id="blogcontent" class=" mt-20">
-    <div class=" p-2">
-        <h2 class=" reveal font-Satoshi font-extrabold text-3xl text-center text-lime-400 mb-5">{frontmatter.title}</h2>
-        <div class=" reveal font-Satoshi text-white font-normal text-base lg:pl-52 lg:pr-52">
-            <Content/>
-        </div>
+  <section id="blogcontent" class="mt-20">
+    <div class="p-2">
+      <h2
+        class="reveal font-Satoshi font-extrabold text-3xl text-center text-lime-400 mb-5"
+      >
+        {frontmatter.title}
+      </h2>
+      <div
+        class="reveal font-Satoshi text-white font-normal text-base lg:pl-52 lg:pr-52"
+      >
+        <Content />
+      </div>
     </div>
   </section>
 </Homelayout>
-
