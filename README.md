@@ -1,16 +1,68 @@
 # Magazineklert
-Magazineklert is a sample margazine template create with astro.js. I have leverage the power of markdown in creating articles/blogs for margazines. To make the page more lively I opted for Gsap to create some motion and scroll triggers on the site.
+
+Magazineklert is a sample magazine template created with Astro.js. This project aims to demonstrate the power of markdown in creating articles and blogs for magazines. To enhance the user experience and make the page more visually engaging, Gsap is utilized to incorporate motion and scroll triggers on the site.
 
 ## Features
-Some of the key features of Magazineklert include:
-1. Responsive design: the template is fully responsive, meaning it will look great on all devices, including desktops, tablets, and smartphones.
-2. Customizable layout: you can easily adjust the layout of the template to suit your needs, using the included CSS and HTML files.
-3. Easy to use: the template is designed to be easy to use, even if you have little experience with web development. All you need is a text editor and a web browser to get started.
-4. Modern design: the template features a clean, modern design that's sure to impress your readers.
----
-To get started with Magazineklert, simply download the repository and open the index.html file in your web browser. From there, you can begin customizing the template to suit your needs.
 
-If you have any questions or issues, please feel free to open an issue on the repository or contact the developers directly.
+- Markdown-based Articles: Magazineklert leverages the flexibility and simplicity of markdown to create rich articles and blog posts. Markdown allows you to focus on the content while still maintaining a visually appealing format.
 
-## Conclusion
-Magazineklert is a powerful and flexible template for creating online magazines. Whether you're an experienced web developer or just getting started, this template has everything you need to get your magazine up and running quickly and easily. So why wait? Download Magazineklert today and start sharing your content with the world!
+- Astro.js: The template is built using Astro.js, a modern static site generator that allows you to combine different technologies and frameworks to create performant and scalable websites. Astro.js provides a seamless development experience and enables efficient server-side rendering.
+
+- Gsap Animation: To add interactivity and visual interest, Gsap (GreenSock Animation Platform) is used. Gsap is a powerful animation library that offers a wide range of features and capabilities. It allows you to create smooth animations, scroll-triggered effects, and stunning transitions to enhance the overall user experience.
+
+## Usage
+
+To get started with Magazineklert, follow these steps:
+
+1. Clone the repository:
+
+```shell
+git clone https://github.com/klevert-ope/Magazineklert.git
+```
+
+2. Navigate to the project directory:
+
+```shell
+cd Magazineklert
+```
+
+3. Install the dependencies:
+
+```shell
+npm install
+```
+
+4. Build the project:
+
+```shell
+npm run build
+```
+
+5. Start the development server:
+
+```shell
+npm run start
+```
+
+6. Open your browser and visit [http://localhost:3000](http://localhost:3000) to see the Magazineklert template in action.
+
+## Customization
+
+You can customize Magazineklert to suit your specific needs. Here are a few areas you might consider modifying:
+
+- **Content**: Replace the sample articles and blog posts with your own content. Simply update the markdown files located in the `src/pages` directory.
+
+- **Styling**: Modify the CSS styles to match your branding and design preferences. The stylesheets can be found in the `src/css` directory.
+
+- **Animations**: Experiment with different animations and transitions by utilizing the Gsap animation library. Refer to the Gsap documentation ([https://greensock.com/docs/](https://greensock.com/docs/)) for detailed instructions and examples.
+
+## License
+
+Magazineklert is licensed under the [MIT License](https://github.com/klevert-ope/Magazineklert/blob/main/LICENSE). You are free to modify and distribute this template for both personal and commercial use.
+
+## Acknowledgments
+
+- Astro.js - [https://astro.build/](https://astro.build/)
+- Gsap - [https://greensock.com/](https://greensock.com/)
+
+Thank you for using Magazineklert! I hope you find it useful and inspiring for your magazine projects.
