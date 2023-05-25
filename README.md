@@ -1,5 +1,5 @@
 # Magazineklert
-Magazineklert is a webpage template for creating online magazines. It's designed to be clean, modern, and customizable, with a focus on readability and user engagement.
+Magazineklert is a sample margazine template create with astro.js. I have leverage the power of markdown in creating articles/blogs for margazines. To make the page more lively I opted for Gsap to create some motion and scroll triggers on the site.
 
 ## Features
 Some of the key features of Magazineklert include:
