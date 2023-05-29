@@ -23,20 +23,53 @@ sections.forEach((section) => {
   });
 });
 
-//header motion
-gsap.from(".daily", { opacity: 0, y: -10, duration: 4.5, ease: "power2" });
-gsap.from(".pop", { opacity: 0, x: -10, duration: 3, ease: "power2" });
-gsap.from(".magazine", { opacity: 0, y: 10, duration: 4.5, ease: "power2" });
-gsap.from(".est", { opacity: 0, y: -10, duration: 4.5, ease: "power2" });
-gsap.from(".sidedrawer", { opacity: 0, y: 20, duration: 4.8, ease: "power2" });
+// Header motion
+gsap.fromTo(
+  ".daily",
+  { opacity: 0, y: -10 },
+  { opacity: 1, y: 0, duration: 4.5, ease: "power2" }
+);
+gsap.fromTo(
+  ".pop",
+  { opacity: 0, x: -10 },
+  { opacity: 1, x: 0, duration: 3, ease: "power2" }
+);
+gsap.fromTo(
+  ".magazine",
+  { opacity: 0, y: 10 },
+  { opacity: 1, y: 0, duration: 4.5, ease: "power2" }
+);
+gsap.fromTo(
+  ".est",
+  { opacity: 0, y: -10 },
+  { opacity: 1, y: 0, duration: 4.5, ease: "power2" }
+);
+gsap.fromTo(
+  ".sidedrawer",
+  { opacity: 0, y: 20 },
+  { opacity: 1, y: 0, duration: 4.8, ease: "power2" }
+);
 
-//introtext motion
-gsap.from(".introtexth1", { opacity: 0, y: 30, duration: 4.5, ease: "power2" });
-gsap.from(".introtexth2", { opacity: 0, y: 40, duration: 4.8, ease: "power2" });
+// Intro text motion
+gsap.fromTo(
+  ".introtexth1",
+  { opacity: 0, y: 30 },
+  { opacity: 1, y: 0, duration: 4.5, ease: "power2" }
+);
+gsap.fromTo(
+  ".introtexth2",
+  { opacity: 0, y: 40 },
+  { opacity: 1, y: 0, duration: 4.8, ease: "power2" }
+);
 
 //showcase motion select the blog card element
 const blogCard = document.querySelector(".blog-cardscale");
 
+gsap.fromTo(
+  ".blog-cardscale",
+  { opacity: 0, y: 20 },
+  { opacity: 1, y: 0, duration: 4.8, ease: "power2" }
+);
 // set the initial scale of the blog card to 0.7
 gsap.set(blogCard, { scale: 0.7 });
 
@@ -50,6 +83,12 @@ gsap.to(blogCard, {
     start: "top 75%",
   },
 });
+
+gsap.fromTo(
+  "#fastB",
+  { opacity: 0, y: 20 },
+  { opacity: 1, y: 0, duration: 4.8, ease: "power2" }
+);
 
 // select elements to reveal
 const elements = document.querySelectorAll(".reveal");
