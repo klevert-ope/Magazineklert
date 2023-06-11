@@ -1,5 +1,5 @@
 ---
-import Homelayout from "../layouts/Homelayout.astro";
+import Bloglayout from "../layouts/Bloglayout.astro";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob("../content/Showcase/*.md");
@@ -17,19 +17,19 @@ export async function getStaticPaths() {
 const { Content, frontmatter } = Astro.props.post;
 ---
 
-<Homelayout title={frontmatter.title}>
+<Bloglayout title={frontmatter.title}>
   <section id="blogcontent" class="mt-20">
     <div class="p-2">
       <h2
-        class="reveal font-Satoshi font-extrabold text-3xl text-center text-lime-400 mb-5"
+        class="blogtitle font-Satoshi font-extrabold text-3xl text-center text-lime-400 mb-5 opacity-0"
       >
         {frontmatter.title}
       </h2>
       <div
-        class="reveal font-Satoshi text-white font-normal text-base leading-6 max-md:px-3 md:px-10 lg:px-52 py-10"
+        class="reveal font-Satoshi text-white font-normal text-base leading-7 max-md:px-3 md:px-10 lg:px-64 py-10 opacity-0"
       >
         <Content />
       </div>
     </div>
   </section>
-</Homelayout>
+</Bloglayout>

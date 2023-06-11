@@ -10,7 +10,7 @@ const posts = await Astro.glob("../content/Showcase/*.md");
       posts.map((post) => (
         <div id="blogcard" class=" blogcardcontent">
           <div class="relative">
-            <img src={post.frontmatter.hero} loading="lazy" />
+            <img src={post.frontmatter.hero} />
             <div class="absolute inset-0 flex flex-col justify-center items-center">
               <h1 class=" font-ClashDisplay font-bold text-lg text-white">
                 {post.frontmatter.herotext}
