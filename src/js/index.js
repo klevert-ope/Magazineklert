@@ -55,6 +55,8 @@ gsap.to(blogCard, {
   duration: 2.5,
   ease: "steps(3)",
   scrollTrigger: {
+    fastScrollEnd: true,
+    scrub: true,
     trigger: blogCard,
     start: "top 90%",
     end: "top 20%",
