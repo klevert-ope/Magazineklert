@@ -81,10 +81,13 @@ elements.forEach((el) => {
       y: 0,
       duration: 1,
       opacity: 1,
-      ease: "power4.in",
+      ease: "power4.out",
       scrollTrigger: {
+        fastScrollEnd: true,
+        scrub: true,
         trigger: el,
         start: "top 90%",
+        end: "top 20%",
       },
     }
   );
