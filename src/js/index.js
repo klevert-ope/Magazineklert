@@ -52,14 +52,15 @@ gsap.set(blogCard, { scale: 0.7 });
 // animate the scale of the blog card to 1 when it reaches the top 80% of the viewport
 gsap.to(blogCard, {
   scale: 1,
-  duration: 2.5,
+  stagger: 1,
   ease: "steps(3)",
   scrollTrigger: {
     fastScrollEnd: true,
+    preventOverlaps: true,
     scrub: true,
     trigger: blogCard,
-    start: "top 90%",
-    end: "top 20%",
+    start: "top 95%",
+    end: "top 55%",
   },
 });
 
@@ -76,18 +77,18 @@ const elements = document.querySelectorAll(".reveal");
 elements.forEach((el) => {
   gsap.fromTo(
     el,
-    { y: 10, opacity: 0 },
+    { y: 20, opacity: 0 },
     {
       y: 0,
-      duration: 1,
+      duration: 0.5,
       opacity: 1,
       ease: "power4.out",
       scrollTrigger: {
         fastScrollEnd: true,
         scrub: true,
         trigger: el,
-        start: "top 90%",
-        end: "top 20%",
+        start: "top 95%",
+        end: "top 70%",
       },
     }
   );
