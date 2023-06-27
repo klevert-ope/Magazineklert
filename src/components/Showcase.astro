@@ -12,12 +12,12 @@ const posts = await Astro.glob("../content/Showcase/*.md");
           <div class="relative">
             <img src={post.frontmatter.hero} />
             <div class="absolute inset-0 flex flex-col justify-center items-center">
-              <h1 class=" font-ClashDisplay font-bold text-lg text-white">
+              <h1 class=" font-ClashDisplay font-bold herotext text-white">
                 {post.frontmatter.herotext}
               </h1>
               <button
                 id="readmore"
-                class=" font-Satoshi font-extrabold text-orange-600 text-xs"
+                class=" font-Satoshi font-extrabold text-orange-600 slugtext"
               >
                 <span>
                   <a href={`/${post.frontmatter.slug}`}>Read More</a>
@@ -30,3 +30,12 @@ const posts = await Astro.glob("../content/Showcase/*.md");
     }
   </div>
 </section>
+
+<style>
+  .herotext {
+    font-size: clamp(15px, 8vw, 80px);
+  }
+  .slugtext {
+    font-size: clamp(14px, 3vw, 24px);
+  }
+</style>
