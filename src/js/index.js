@@ -59,8 +59,8 @@ gsap.to(blogCard, {
     preventOverlaps: true,
     scrub: true,
     trigger: blogCard,
-    start: "top 95%",
-    end: "top 55%",
+    start: "clamp(top 95%)",
+    end: "clamp(top 55%)",
   },
 });
 
@@ -80,15 +80,15 @@ elements.forEach((el) => {
     { y: 20, opacity: 0 },
     {
       y: 0,
-      duration: 0.5,
+      duration: 1,
       opacity: 1,
-      ease: "power4.out",
+      ease: "power4.inout",
       scrollTrigger: {
         fastScrollEnd: true,
         scrub: true,
         trigger: el,
-        start: "top 95%",
-        end: "top 70%",
+        start: "clamp(top 95%)",
+        end: "clamp(top 75%)",
       },
     }
   );
