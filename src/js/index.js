@@ -1,6 +1,5 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 // Header motion
@@ -77,7 +76,7 @@ const elements = document.querySelectorAll(".reveal");
 elements.forEach((el) => {
   gsap.fromTo(
     el,
-    { y: 20, opacity: 0 },
+    { y: 30, opacity: 0 },
     {
       y: 0,
       duration: 1,
@@ -85,7 +84,7 @@ elements.forEach((el) => {
       ease: "power4.inout",
       scrollTrigger: {
         fastScrollEnd: true,
-        scrub: true,
+        scrub: 0.5,
         trigger: el,
         start: "clamp(top 95%)",
         end: "clamp(top 75%)",
