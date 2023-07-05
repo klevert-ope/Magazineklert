@@ -42,5 +42,10 @@ gsap.fromTo(
     duration: 2.8,
     opacity: 1,
     ease: "circ.in",
+    onComplete: showSection,
   }
 );
+
+function showSection() {
+  document.querySelector("#footer").style.display = "block";
+}

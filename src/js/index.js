@@ -3,48 +3,69 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 // Header motion
-gsap.fromTo(
-  ".daily",
-  { opacity: 0, y: -10 },
-  { opacity: 1, y: 0, duration: 2.5, ease: "power4.in" }
-);
-gsap.fromTo(
-  ".pop",
-  { opacity: 0, x: -10 },
-  { opacity: 1, x: 0, duration: 2, ease: "power4.in" }
-);
-gsap.fromTo(
-  ".magazine",
-  { opacity: 0, y: 10 },
-  { opacity: 1, y: 0, duration: 2.5, ease: "power4.in" }
-);
-gsap.fromTo(
-  ".est",
-  { opacity: 0, y: -10 },
-  { opacity: 1, y: 0, duration: 2.5, ease: "power4.in" }
-);
-gsap.fromTo(
-  ".sidedrawer",
-  { opacity: 0, y: 20 },
-  { opacity: 1, y: 0, duration: 2.8, ease: "power4.in" }
-);
+let timeline = gsap.timeline();
 
-// Intro text motion
-gsap.fromTo(
-  ".introtexth1",
-  { opacity: 0, y: 30 },
-  { opacity: 1, y: 0, duration: 2.5, ease: "power4.in" }
-);
-gsap.fromTo(
-  ".introtexth2",
-  { opacity: 0, y: 40 },
-  { opacity: 1, y: 0, duration: 3.8, ease: "power4.in" }
-);
+timeline
+  .fromTo(
+    ".daily",
+    { opacity: 0, y: -10 },
+    { opacity: 1, y: 0, duration: 2.5, ease: "power4.in" }
+  )
+  .fromTo(
+    ".pop",
+    { opacity: 0, x: -10 },
+    { opacity: 1, x: 0, duration: 2, ease: "power4.in" },
+    "-=1.5" // delay the start by 1.5 seconds relative to the previous animation
+  )
+  .fromTo(
+    ".magazine",
+    { opacity: 0, y: 10 },
+    { opacity: 1, y: 0, duration: 2.5, ease: "power4.in" },
+    "-=1.8" // delay the start by 1.8 seconds relative to the previous animation
+  )
+  .fromTo(
+    ".est",
+    { opacity: 0, y: -10 },
+    { opacity: 1, y: 0, duration: 2.5, ease: "power4.in" },
+    "-=1.8" // delay the start by 1.8 seconds relative to the previous animation
+  )
+  .fromTo(
+    ".sidedrawer",
+    { opacity: 0, y: 20 },
+    { opacity: 1, y: 0, duration: 2.8, ease: "power4.in" },
+    "-=2.1" // delay the start by 2.1 seconds relative to the previous animation
+  )
+  .fromTo(
+    ".introtexth1",
+    { opacity: 0, y: 30 },
+    { opacity: 1, y: 0, duration: 2.5, ease: "power4.in" },
+    "-=2.3" // delay the start by 2.3 seconds relative to the previous animation
+  )
+  .fromTo(
+    ".introtexth2",
+    { opacity: 0, y: 40 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 3.8,
+      ease: "power4.in",
+      onComplete: showSections,
+    },
+    "-=2.5" // delay the start by 2.5 seconds relative to the previous animation
+  );
 
-//showcase motion select the blog card element
+function showSections() {
+  document.querySelector("#blogcards").style.display = "block";
+  document.querySelector("#fastB").style.display = "block";
+  document.querySelector("#footer").style.display = "block";
+
+  // Refresh the ScrollTrigger after the sections are displayed
+  ScrollTrigger.refresh();
+}
+
+// showcase motion: select the blog card element
 const blogCard = document.querySelector(".blog-cardscale");
 
-gsap.fromTo(".blog-cardscale", { opacity: 0 }, { opacity: 1 });
 // set the initial scale of the blog card to 0.7
 gsap.set(blogCard, { scale: 0.7 });
 
@@ -84,7 +105,7 @@ elements.forEach((el) => {
       ease: "power4.inout",
       scrollTrigger: {
         fastScrollEnd: true,
-        scrub: 0.5,
+        scrub: 0.1,
         trigger: el,
         start: "clamp(top 95%)",
         end: "clamp(top 75%)",
