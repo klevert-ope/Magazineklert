@@ -4,7 +4,7 @@ const lenis = new Lenis({
   smoothTouch: false,
   touchMultiplier: 2,
   infinite: false,
-  mouseMultiplier: 1,
+  wheelMultiplier: 1,
 });
 
 lenis.on("scroll", (e) => {
