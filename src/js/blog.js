@@ -1,6 +1,11 @@
 import { gsap } from "gsap";
 
-const lenis = new Lenis();
+const lenis = new Lenis({
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
+  mouseMultiplier: 1,
+});
 
 lenis.on("scroll", (e) => {
   console.log(e);

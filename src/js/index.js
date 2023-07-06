@@ -2,7 +2,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const lenis = new Lenis();
+const lenis = new Lenis({
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
+  mouseMultiplier: 1,
+});
 
 lenis.on("scroll", (e) => {
   console.log(e);
@@ -121,14 +126,14 @@ elements.forEach((el) => {
     { y: 30, opacity: 0 },
     {
       y: 0,
-      duration: 1,
+      duration: 2,
       opacity: 1,
-      ease: "power4.inout",
+      ease: "power2.inout",
       scrollTrigger: {
         fastScrollEnd: true,
         scrub: true,
         trigger: el,
-        start: "clamp(top 95%)",
+        start: "clamp(top 100%)",
         end: "clamp(top 75%)",
       },
     }
