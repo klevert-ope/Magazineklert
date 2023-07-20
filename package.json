@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^4.0.0",
-    "astro": "^2.7.0",
+    "astro": "^2.9.0",
     "astro-compressor": "^0.4.0",
     "flowbite": "^1.6.5",
     "gsap": "^3.12.2",
